@@ -43,7 +43,7 @@ const Registration = () => {
                     name="userName"
                     value={admin.userName}
                     onChange={handleChange}
-                    placeholder="Usernam"
+                    placeholder="Username"
                 />
                 <input
                     type="email"
