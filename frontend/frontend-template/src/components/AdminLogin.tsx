@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../app/hooks";
 import {AdminState, selectAdmin, updateAdmin} from "../features/admin/adminSlice";
-import {useLoaderData, useNavigate} from "react-router-dom";
+import {Link, useLoaderData, useNavigate} from "react-router-dom";
 import {isLoggedIn} from "./MainLayout";
 import {adminLoginAPI} from "../features/admin/adminAPIs";
 import '../css/AdminLogin.css'
@@ -32,9 +32,18 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h1>Login</h1>
+        <div className="container1">
+        <div className="left-container">
+        <h1>Welcome to our platform!</h1>
+        <button className="button1"><Link className='towhite' style={{textDecoration:'none'}}  to='/register'>Register</Link></button>
+        </div>
+        <div className='right-container'>
+            <div className="header">
+            <div className="text">Login</div>
+            </div>
+            <div className="inputs">
             <form onSubmit={handleSubmit}>
+                <div className="input">
                 <input
                     type="text"
                     name="userName"
@@ -42,6 +51,8 @@ const Login = () => {
                     onChange={handleChange}
                     placeholder="Username"
                 />
+                </div>
+                <div className="input">
                 <input
                     type="password"
                     name="password"
@@ -49,9 +60,18 @@ const Login = () => {
                     onChange={handleChange}
                     placeholder="Password"
                 />
-                <button type="submit">Login</button>
+                </div>
+                <div className="submit-container">
+                <button className='button' type="submit">Login</button>
+                </div>
+                
             </form>
+
+            </div>
+            
         </div>
+        </div>
+        
     );
 };
 
