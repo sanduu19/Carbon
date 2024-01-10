@@ -41,9 +41,12 @@ const Registration = () => {
             <h1>Welcome to our platform!</h1>
             </div>
             <div className="right-container">
-             <div>
-            <h1>Register</h1>
+            <div className="header">
+            <div className="text">Register</div>
+            </div>
+             <div className='inputs'>
             <form onSubmit={handleSubmit}>
+                <div className="input">
                 <input
                     type="text"
                     name="userName"
@@ -51,20 +54,26 @@ const Registration = () => {
                     onChange={handleChange}
                     placeholder="Username"
                 />
-                <input
+                </div>
+                <div className="input">
+                     <input
                     type="email"
                     name="email"
                     value={admin.email}
                     onChange={handleChange}
                     placeholder="Email"
                 />
-                <input
+                </div>
+               <div className="input">
+               <input
                     type="password"
                     name="password"
                     value={admin.password}
                     onChange={handleChange}
                     placeholder="Password"
                 />
+               </div>
+                <div className="input">
                 <input
                     type="text"
                     name="role"
@@ -72,7 +81,12 @@ const Registration = () => {
                     onChange={handleChange}
                     placeholder="Role"
                 />
-                <button type="submit">Register</button>
+                </div>
+                <div className="submit-container">
+                <button className='button' type="submit">Register</button>
+
+                </div>
+                
             </form>
         </div>
 
