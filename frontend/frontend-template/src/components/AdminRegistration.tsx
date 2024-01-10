@@ -10,9 +10,10 @@ import {adminRegistrationAPI} from "../features/admin/adminAPIs";
 import {Link, redirect, useLoaderData, useNavigate} from "react-router-dom";
 import {isLoggedIn} from "./MainLayout";
 import bg2 from '../components/Assets/bgggg.jpg'
-import userIcon from '../../assets/person.png';
-import emailIcon from '../../assets/email.png';
-import passwordIcon from '../../assets/password.png';
+import userIcon from '../components/Assets/person.png'
+import emailIcon from '../components/Assets/email.png'
+import passwordIcon from '../components/Assets/password.png'
+import roleicon from '../components/Assets/login.png'
 
 export function loader() {
     return isLoggedIn();
@@ -82,7 +83,7 @@ const Registration = () => {
                 />
                </div>
                 <div className="input">
-                    <img src="" alt="" />
+                    <img src={roleicon} alt="" />
                 <input
                     type="text"
                     name="role"

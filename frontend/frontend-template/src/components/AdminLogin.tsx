@@ -6,6 +6,9 @@ import {isLoggedIn} from "./MainLayout";
 import {adminLoginAPI} from "../features/admin/adminAPIs";
 import '../css/AdminLogin.css'
 import bg2 from '../components/Assets/bgggg.jpg'
+import userIcon from '../components/Assets/person.png'
+import passwordIcon from '../components/Assets/password.png'
+
 
 export function loader() {
     return isLoggedIn();
@@ -45,6 +48,8 @@ const Login = () => {
             <div className="inputs">
             <form onSubmit={handleSubmit}>
                 <div className="input">
+                <img src={userIcon} alt="User Icon" />
+
                 <input
                     type="text"
                     name="userName"
@@ -54,6 +59,8 @@ const Login = () => {
                 />
                 </div>
                 <div className="input">
+                <img src={passwordIcon} alt="Password Icon" />
+
                 <input
                     type="password"
                     name="password"
