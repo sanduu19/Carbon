@@ -5,6 +5,7 @@ import {Link, useLoaderData, useNavigate} from "react-router-dom";
 import {isLoggedIn} from "./MainLayout";
 import {adminLoginAPI} from "../features/admin/adminAPIs";
 import '../css/AdminLogin.css'
+import bg2 from '../components/Assets/bgggg.jpg'
 
 export function loader() {
     return isLoggedIn();
@@ -33,7 +34,7 @@ const Login = () => {
 
     return (
         <div className="container1">
-        <div className="left-container">
+        <div className="left-container" style={{backgroundImage:`url(${bg2})`}}>
         <h1>Welcome to our platform!</h1>
         <button className="button1"><Link className='towhite' style={{textDecoration:'none'}}  to='/register'>Register</Link></button>
         </div>
