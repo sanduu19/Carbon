@@ -10,6 +10,9 @@ import {adminRegistrationAPI} from "../features/admin/adminAPIs";
 import {Link, redirect, useLoaderData, useNavigate} from "react-router-dom";
 import {isLoggedIn} from "./MainLayout";
 import bg2 from '../components/Assets/bgggg.jpg'
+import userIcon from '../../assets/person.png';
+import emailIcon from '../../assets/email.png';
+import passwordIcon from '../../assets/password.png';
 
 export function loader() {
     return isLoggedIn();
@@ -49,6 +52,7 @@ const Registration = () => {
              <div className='inputs'>
             <form onSubmit={handleSubmit}>
                 <div className="input">
+                <img src={userIcon} alt="User Icon" />
                 <input
                     type="text"
                     name="userName"
@@ -58,6 +62,7 @@ const Registration = () => {
                 />
                 </div>
                 <div className="input">
+                <img src={emailIcon} alt="Email Icon" />
                      <input
                     type="email"
                     name="email"
@@ -67,6 +72,7 @@ const Registration = () => {
                 />
                 </div>
                <div className="input">
+               <img src={passwordIcon} alt="Password Icon" />
                <input
                     type="password"
                     name="password"
@@ -76,6 +82,7 @@ const Registration = () => {
                 />
                </div>
                 <div className="input">
+                    <img src="" alt="" />
                 <input
                     type="text"
                     name="role"
