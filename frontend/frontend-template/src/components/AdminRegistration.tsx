@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../app/hooks";
+import '../css/AdminRegistration.css'
 import {
     AdminState,
     selectAdmin,
@@ -35,7 +36,12 @@ const Registration = () => {
     };
 
     return (
-        <div>
+        <div className="container1">
+            <div className="left-container">
+            <h1>Welcome to our platform!</h1>
+            </div>
+            <div className="right-container">
+             <div>
             <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -69,6 +75,11 @@ const Registration = () => {
                 <button type="submit">Register</button>
             </form>
         </div>
+
+        </div>
+        </div>
+       
+       
     );
 };
 

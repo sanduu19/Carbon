@@ -4,6 +4,7 @@ import {AdminState, selectAdmin, updateAdmin} from "../features/admin/adminSlice
 import {useLoaderData, useNavigate} from "react-router-dom";
 import {isLoggedIn} from "./MainLayout";
 import {adminLoginAPI} from "../features/admin/adminAPIs";
+import '../css/AdminLogin.css'
 
 export function loader() {
     return isLoggedIn();
