@@ -7,7 +7,7 @@ import {
     updateAdmin,
 } from "../features/admin/adminSlice";
 import {adminRegistrationAPI} from "../features/admin/adminAPIs";
-import {redirect, useLoaderData, useNavigate} from "react-router-dom";
+import {Link, redirect, useLoaderData, useNavigate} from "react-router-dom";
 import {isLoggedIn} from "./MainLayout";
 
 export function loader() {
@@ -39,6 +39,7 @@ const Registration = () => {
         <div className="container1">
             <div className="left-container">
             <h1>Welcome to our platform!</h1>
+            <button className="button1"><Link className='towhite' style={{textDecoration:'none'}}  to='/login'>Login</Link></button>
             </div>
             <div className="right-container">
             <div className="header">

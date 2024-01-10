@@ -142,4 +142,6 @@
         left: 0;
         z-index: -2;
   }
-  
+  .towhite{
+    color: white;
+  }
